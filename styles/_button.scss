@@ -1,0 +1,55 @@
+.btn{
+  &-cta{
+    font-size: 1.2rem;
+    transform: rotate(-45deg);
+    transition: all 0.7s ease-out;
+    background: transparent;
+    border: 1px solid $primary;
+    color:$primary;
+    &:hover{
+      transform: rotate(0);
+      background: $primary;
+      color:$light;
+    }
+  }
+}
+
+.nav-btn {
+  position: relative;
+  z-index: 20;
+  display: flex;
+  width: 64px;
+  height: 64px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: all 0.7s ease-out;
+  &__bar{
+    position: relative;
+    width: 17px;
+    height: 2px;
+    margin: 2px 0;
+    background-color: #000;
+    width: 23px;
+    margin: 3px 0;
+    transform-origin: 0 50%;
+    transition: transform .5s cubic-bezier(.645,.045,.355,1) .5s;
+
+    &:nth-child(2){
+      transform-origin: 100% 50%;
+    }
+  }
+
+  &:before{
+    content: "";
+    position: absolute;
+    top: calc(50% - 90px);
+    left: calc(50% - 90px);
+    width: 180px;
+    height: 180px;
+    background-color: #fff;
+    border-radius: 90px;
+    transform: translateZ(0) scale(.35556);
+    transition: transform .5s cubic-bezier(.215,.61,.355,1) 0ms,background .5s cubic-bezier(.215,.61,.355,1);
+  }
+}
