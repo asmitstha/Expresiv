@@ -12,6 +12,16 @@
       color:$light;
     }
   }
+  &-link{
+    &--expresiv{
+      &:hover{
+        .btn-arrow{
+          transition: all 0.7s ease-out;
+          transform: translate(10px);
+        }
+      }
+    }
+  }
 }
 
 .nav-btn {
@@ -47,7 +57,7 @@
     left: calc(50% - 90px);
     width: 180px;
     height: 180px;
-    background-color: #fff;
+    //background-color: #fff;
     border-radius: 90px;
     transform: translateZ(0) scale(.35556);
     transition: transform .5s cubic-bezier(.215,.61,.355,1) 0ms,background .5s cubic-bezier(.215,.61,.355,1);

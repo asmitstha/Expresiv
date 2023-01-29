@@ -8,52 +8,79 @@ body {
 	background-attachment: fixed;
 }
 
-h2 {
-	font-size: 2em;
-	@media (min-width: 768px) {
-		font-size: 5vw;
-	}
-  span{
-    display: block;
-  }
-}
-
 .letter-space-20{
-  letter-spacing: 20px;
-  @media (min-width: 768px) {
-		font-size: 6vw;
-	}
-}
-
-.card{
-  &-project{
-    width:424px;
+  letter-spacing: 2px;
+  @include media-breakpoint-up(lg){
+    font-size: 6vw;
+    letter-spacing: 20px;
   }
 }
+
 
 .w-44{
-  width: 11rem;
+  width:8rem;
 } 
 
 .h-44{
-  height: 11rem;
+  height:8rem;
 }
 
+.primary-gradient {
+  background-color: $primary;
+  background-image: radial-gradient(circle at 47% 14%, rgba(205, 205, 205,0.04) 0%, rgba(205, 205, 205,0.04) 43%,transparent 43%, transparent 100%),radial-gradient(circle at 35% 12%, rgba(215, 215, 215,0.04) 0%, rgba(215, 215, 215,0.04) 4%,transparent 4%, transparent 100%),radial-gradient(circle at 1% 35%, rgba(24, 24, 24,0.04) 0%, rgba(24, 24, 24,0.04) 37%,transparent 37%, transparent 100%),radial-gradient(circle at 21% 1%, rgba(0, 0, 0,0.04) 0%, rgba(0, 0, 0,0.04) 26%,transparent 26%, transparent 100%),radial-gradient(circle at 23% 82%, rgba(249, 249, 249,0.04) 0%, rgba(249, 249, 249,0.04) 60%,transparent 60%, transparent 100%),radial-gradient(circle at 11% 54%, rgba(251, 251, 251,0.04) 0%, rgba(251, 251, 251,0.04) 23%,transparent 23%, transparent 100%),radial-gradient(circle at 69% 68%, rgba(234, 234, 234,0.04) 0%, rgba(234, 234, 234,0.04) 10%,transparent 10%, transparent 100%),linear-gradient(90deg, $primary,$primary);
+}
 
 ::-webkit-scrollbar-track
 {
 	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-	background-color: #F5F5F5;
+	background-color: $light;
 }
 
 ::-webkit-scrollbar
 {
 	width: 6px;
-	background-color: #F5F5F5;
+	background-color: $light;
 }
 
 ::-webkit-scrollbar-thumb
 {
-	background-color: #000000;
+	background-color: $dark;
 }
 
+.filter-blur{
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+}
+
+div[class*='kursor'].kursor--4.--hover {
+  width: 60px !important;
+  height: 60px !important;
+}
+
+.form{
+  &-custom{
+    border: 0;
+    border-bottom: 1px solid $dark;
+    border-radius: 0;
+
+    &:focus{
+      box-shadow: none;
+    }
+  }
+}
+
+.text-stroke{
+  color: transparent;
+	-webkit-text-stroke: 2px $primary;
+    font-size: 3rem;
+    @include media-breakpoint-up(lg){
+      font-size: 8rem;
+    }
+}
+
+.z-index-0{
+  z-index: -1;
+}
+.mb-100vh{
+  margin-bottom: 100vh;
+}

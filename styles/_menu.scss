@@ -1,6 +1,10 @@
-.header{
-  position: relative;
+#header{
   z-index: 20;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: block;
+  transition: all 0.3s ease-out;
 }
 
 .nav-overlay {
@@ -19,7 +23,10 @@
   transform: translate3d(450.511px, 370.423px, 0px) scale(0);
   transition: all 0.7s ease-out;
   &.show{
-    transform: translate3d(0px, 0px, 0px) scale(1);
+    transform: translate3d(0px, 0px, 0px) scale(2);
+    @include media-breakpoint-up(lg){
+      transform: translate3d(0px, 0px, 0px) scale(1);
+     }
   }
 }
 
@@ -33,10 +40,7 @@
         transform-origin: 100% 50%;
       }
     }
-    &:before{
-      content: "";
-      background-color: var(--bs-primary);
-    }
+   
   }
 }
 .nav-container {
